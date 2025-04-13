@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode - for reference, but we'll primarily use dark mode */
+    --background: 0 0% 97%; /* #f7f8fa */
+    --foreground: 0 0% 18%; /* #2F2F2F */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 18%; /* #2F2F2F */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 18%; /* #2F2F2F */
+
+    --primary: 220 100% 60%; /* #3366FF - Electric Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 240 38% 17%; /* #1B1F3B - Deep Blue */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --muted: 220 20% 95%; /* Light blue-gray */
+    --muted-foreground: 220 10% 50%; /* Medium blue-gray */
+
+    --accent: 156 80% 50%; /* #17E8C0 - Turquoise */
+    --accent-foreground: 240 38% 17%; /* #1B1F3B - Deep Blue */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 220 100% 60%; /* #3366FF - Electric Blue */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark mode - our primary theme */
+    --background: 240 38% 17%; /* #1B1F3B - Deep Blue */
+    --foreground: 0 0% 100%; /* White */
+
+    --card: 240 38% 20%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 100%; /* White */
+
+    --popover: 240 38% 20%; /* Slightly lighter than background */
+    --popover-foreground: 0 0% 100%; /* White */
+
+    --primary: 220 100% 60%; /* #3366FF - Electric Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 250 40% 28%; /* #2E2963 - Deep Purple */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --muted: 240 30% 25%; /* Muted dark blue */
+    --muted-foreground: 220 20% 80%; /* Light blue-gray */
+
+    --accent: 140 75% 60%; /* #4AE371 - Bright Lime Green */
+    --accent-foreground: 240 38% 17%; /* #1B1F3B - Deep Blue */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 240 30% 25%;
+    --input: 240 30% 25%;
+    --ring: 220 100% 60%; /* #3366FF - Electric Blue */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
